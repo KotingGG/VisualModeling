@@ -7,11 +7,14 @@
 "uv" is used for fast loading and convenience.
 
 ```bash
-pip install uv
-uv sync
+pip install -r requirements.txt
 ```
 
 ## run the project
 ```bash
+# Activation of virtual space
+venv\Scripts\activate 
+
+# Project launch
 uv run main.py
 ```
