@@ -1,29 +1,36 @@
+import math
+
+
 class Hydrogen:
     def __init__(self):
-        """
-        Since the difference between the radius of the atom itself and the nucleus 
-        of the atom with electrons is very huge (1:100,000), 
-        we will round it off approximately for visualization.
-
-        The ratio of the radius of an atom's nucleus to the radius of its electron is 1:10. 
-        For clarity, this ratio has been changed to 1:2.
-        """
         self.name = "Hydrogen"
         self.symbol = "H"
-        self.nucleus_radius = 12.0
-        self.electron_radius = 6.0
-        self.orbit_radius = 0.529
-        self.scale = 300
+        self.atomic_number = 1
+        self.a0 = 0.529 
+        self.scale = 100
 
-    def get_orbit_radius_px(self) -> float:
-        """ Approximately rounded to `self.scale` for visualization """
-        return self.orbit_radius * self.scale
-    
-    def get_nucleus_radius_px(self) -> float:
-        return self.nucleus_radius
-    
-    def get_electron_radius_px(self) -> float:
-        return self.electron_radius
-    
-    def get_name(self) -> str:
+        self.nucleus_radius_px = 5
+
+    def get_name(self):
         return self.name
+
+    def get_nucleus_radius_px(self):
+        return self.nucleus_radius_px
+
+    def get_orbit_radius_px(self):
+        return int(self.a0 * self.scale)
+
+    def probability_1s(self, x_ang, y_ang):
+        r = math.sqrt(x_ang**2 + y_ang**2)
+        return math.exp(-2*r/self.a0)
+
+    def probability_2p(self, x_ang, y_ang, t):
+        r = math.sqrt(x_ang**2 + y_ang**2)
+        if r == 0:
+            return 0
+        
+        angle_factor = (x_ang / r) ** 2
+        radial_part = (r**2 / self.a0**2) * math.exp(-r/self.a0)
+        time_factor = 0.5 + 0.5 * math.sin(t)
+        
+        return radial_part * angle_factor * time_factor * 0.1
