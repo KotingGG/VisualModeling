@@ -1,6 +1,5 @@
 import math
 
-
 class Hydrogen:
     def __init__(self):
         self.name = "Hydrogen"

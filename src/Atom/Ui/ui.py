@@ -2,7 +2,7 @@ import customtkinter as ctk
 import math
 import random
 
-from ..Atom.hydrogen import Hydrogen
+from hydrogen import Hydrogen
 
 class App(ctk.CTk):
     def __init__(self, *args, **kwargs):

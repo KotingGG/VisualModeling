@@ -11,10 +11,20 @@ pip install -r requirements.txt
 ```
 
 ## run the project
+
 ```bash
 # Activation of virtual space
 venv\Scripts\activate 
+```
 
-# Project launch
-uv run main.py
+### Atom
+Project launch
+```bash
+py src/Atom/main.py
+```
+
+### Terminal Render
+Project launch
+```bash
+py src/TerminalRender/main.py
 ```

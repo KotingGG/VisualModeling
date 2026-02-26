@@ -1,4 +1,4 @@
-from src.VisualModeling.Ui.ui import App
+from Ui.ui import App
 
 def main():
     app = App()
