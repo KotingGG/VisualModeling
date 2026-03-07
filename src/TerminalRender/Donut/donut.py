@@ -3,6 +3,7 @@ import math
 import time
 
 class Donut:
+
     # ASCII canvas dimensions
     SCREEN_WIDTH = 50
     SCREEN_HEIGHT = 50
@@ -24,9 +25,11 @@ class Donut:
 
     @staticmethod
     def run():
-        """Starts an endless animation of a rotating torus."""
+        """Starts an endless animation of a rotating torus"""
+
         A = 0.0  # rotation angle around the X axis
         B = 0.0  # rotation angle around the Z axis
+
         try:
             while True:
                 Donut.render_frame(A, B)
@@ -38,7 +41,8 @@ class Donut:
 
     @staticmethod
     def render_frame(A, B):
-        """Draws one frame of a torus at the given angles A and B."""
+        """Draws one frame of a torus at the given angles A and B"""
+
         cosA = math.cos(A)
         sinA = math.sin(A)
         cosB = math.cos(B)

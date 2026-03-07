@@ -2,6 +2,7 @@ from Cube.cube import Cube
 from Donut.donut import Donut
 
 def main():
+
     while True:
         model = input("Select model (cube/donut): ").strip().lower()
         if model in ("cube", "donut"):
