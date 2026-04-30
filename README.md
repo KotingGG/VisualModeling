@@ -21,28 +21,35 @@ This repository is solely for the sake of learning and the interest of creating 
 (TODO: Document all this, please)
 
 ## Quick Start
+**Prerequisites**
+- Python 3.13+
 
-### download dependencies 
-"uv" is used for fast loading and convenience.
+### Installation & Run
+**Clone and set up the project:**
+```
+git clone https://github.com/KotingGG/GameAgnosticCognitivePlayer.git
+cd Game-Agnostic-Cognitive-Player
+```
 
+**Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-### run the project
-
+**Activation of virtual space**
 ```bash
-# Activation of virtual space
 venv\Scripts\activate 
 ```
 
-**Atom:**
+**Run The Project:**
+
+1. **Atom:**
 Project launch
 ```bash
 py src/Atom/main.py
 ```
 
-**Terminal Render:**
+2. **Terminal Render:**
 Project launch
 ```bash
 py src/TerminalRender/main.py
