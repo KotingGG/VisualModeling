@@ -27,7 +27,7 @@ This repository is solely for the sake of learning and the interest of creating 
 ### Installation & Run
 **Clone and set up the project:**
 ```
-git clone https://github.com/KotingGG/GameAgnosticCognitivePlayer.git
+git clone https://github.com/ResInferrer/GameAgnosticCognitivePlayer.git
 cd Game-Agnostic-Cognitive-Player
 ```
 
